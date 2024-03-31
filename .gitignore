@@ -85,6 +85,10 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+### dotenv ###
+.env
+
+# End of https://www.toptal.com/developers/gitignore/api/dotenv
 
 # Gatsby files
 .cache/

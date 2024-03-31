@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose'
 
-import { StoreCategory } from '@/constant/StoreCategory'
+import { StoreCategory } from '@/constants/deliveryStatus'
 
 const storeSchema = new Schema({
   name: {

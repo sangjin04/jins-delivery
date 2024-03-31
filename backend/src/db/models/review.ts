@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose'
+import { Schema, model } from 'mongoose';
 
 const reviewSchema = new Schema({
   user: {
@@ -7,16 +7,17 @@ const reviewSchema = new Schema({
     required: true,
     index: true,
   },
+  
   menus: [
     {
-      _id: {
+      id: { // 메뉴 항목의 ObjectId
         type: Schema.Types.ObjectId,
         ref: 'Menu',
         required: true,
       },
-      name: { type: String, required: true },
-      like: { type: Boolean, default: false },
-      dislike: { type: Boolean, default: false },
+      name: { type: String, required: true }, 
+      like: { type: Boolean, default: false }, 
+      dislike: { type: Boolean, default: false }, 
     },
   ],
   store: {
@@ -33,6 +34,6 @@ const reviewSchema = new Schema({
   review: String,
   image: String,
   createdAt: { type: Date, default: Date.now },
-})
+});
 
-export const Review = model('Review', reviewSchema)
+export const Review = model('Review', reviewSchema);
